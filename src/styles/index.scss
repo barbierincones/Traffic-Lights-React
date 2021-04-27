@@ -1,13 +1,129 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+/*Característica del contenedor padre*/
+.main{
+    margin: 1.25rem;
+}
+/*Característica de la base superior*/
+.top-base{
+    width: 6.25rem;
+    height: 1.56rem;
+    background-color: #000000;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+/*Característica de la caja del semáforo*/
+.traffic-lights{
+    background-color: #000000;
+    width: 11.25rem;
+    height: 26.25rem;
+    border-radius: 1.125rem;
+}
+/*Característica de la luz roja*/
+.red{
+    background-color: red;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+/*Característica de la luz amarilla*/
+.yellow{
+    background-color:yellow;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+/*Característica de la luz verde*/
+.green{
+    background-color: green;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+/*Característica cuando se selecciona la luz en el semáforo*/
+.selected{
+    opacity: 1; 
+    box-shadow: -0.06rem 0rem 2rem 0.12rem rgba(255, 255, 255, 0.822);
+}
+/*Característica de la base inferior*/
+.bottom-base{
+    width: 6.25rem;
+    height: 0.87rem;
+    background-color: #000000;
+}
+/*Característica de la columna del semáforo*/
+.pillar{
+    width: 1.25rem;
+    height: 23.12rem;
+    background-color: #B3B3B3;
+}
+/*Característica de la base de la columna del semáforo*/
+.base{
+    width: 6.25rem;
+    height: 1.25rem;
+    background-color: #000000;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+/*Adaptaciones móviles para cada componente*/
+@media screen and (max-width: 768px){
+    .main{
+        margin: 20px;
+    }
+    .top-base{
+        width: 2.81rem;
+        height: 0.68rem;
+        background-color: #000000;
+        border-top-left-radius: 20%;
+        border-top-right-radius: 20%;
+    }
+    .traffic-lights{
+        background-color: #000000;
+        width: 5rem;
+        height: 13.75rem;
+        border-radius: 1.12rem;
+    }
+    .red{
+        background-color: red;
+        width: 3.12rem;
+        height: 3.12rem;
+        border-radius: 50%;
+        opacity: 0.2;
+    }
+    .yellow{
+        background-color:yellow;
+        width: 3.12rem;
+        height: 3.12rem;
+        border-radius: 50%;
+        opacity: 0.2;
+    }
+    .green{
+        background-color: green;
+        width: 3.12rem;
+        height: 3.12rem;
+        border-radius: 50%;
+        opacity: 0.2;
+    }
+    .selected{
+        opacity: 1; 
+        box-shadow: -0.06rem 0rem 2rem 0.12rem rgba(255, 255, 255, 0.822);
+    }
+    .bottom-base{
+        width: 2.81rem;
+        height: 0.43rem;
+        background-color: #000000;
+    }
+    .pillar{
+        width: 0.93rem;
+        height: 16.87rem;
+        background-color: #B3B3B3;
+    }
+    .base{
+        width: 2.81rem;
+        height: 0.43rem;
+        background-color: #000000;
+    }
+}
 
-*/

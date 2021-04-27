@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 export function Home() {
+	const [selected, setSelected] = useState("");
+
+	const changeLight = color => {
+		setSelected(color);
+	};
+
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="d-flex justify-content-center">
+			<div className="d-flex flex-column justify-content-around main align-items-center">
+				<div className="top-base"></div>
+				<div className="traffic-lights d-flex flex-column justify-content-around align-items-center">
+					<div
+						className={`red${
+							selected === "red" ? " selected" : ""
+						}`}
+						onClick={e => changeLight(e.target.className)}></div>
+					<div
+						className={`yellow${
+							selected === "yellow" ? " selected" : ""
+						}`}
+						onClick={e => changeLight(e.target.className)}></div>
+					<div
+						className={`green${
+							selected === "green" ? " selected" : ""
+						}`}
+						onClick={e => changeLight(e.target.className)}></div>
+				</div>
+				<div className="bottom-base"></div>
+				<div className="pillar"></div>
+				<div className="base"></div>
+			</div>
 		</div>
 	);
 }
